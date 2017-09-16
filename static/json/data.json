@@ -1,0 +1,34 @@
+{
+    "datas": [
+        {
+            "title": "vue官方教程",
+            "path": "https://cn.vuejs.org/",
+            "route": "/vueOffical"
+        },
+        {
+            "title": "webpack教程",
+            "path": "http://www.css88.com/doc/webpack2/guides/development/?q=",
+            "route": "/webpack"
+        },
+        {
+            "title": "mint(vue 手机端UI)",
+            "path": "http://mint-ui.github.io/#!/zh-cn",
+            "route": "/mintUI"
+        },
+        {
+            "title": "前端性能优化",
+            "path": "http://www.cnblogs.com/developersupport/p/webpage-performance-best-practices.html",
+            "route": "property"
+        },
+        {
+            "title": "nodejs教程",
+            "path": "http://www.yiibai.com/nodejs/nodejs-quick-start.html",
+            "route": "node"
+        },
+        {
+            "title": "ES6入门",
+            "path": "http://es6.ruanyifeng.com/",
+            "route": "es6"
+        }
+    ]
+}

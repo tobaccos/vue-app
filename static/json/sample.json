@@ -1,0 +1,19 @@
+{
+    "samples": [
+        {
+            "title": "橙越商城",
+            "yuanma": "https://github.com/tobaccos/chengyue",
+            "yanshi": "http://www.youpinshanglian.com"
+        },
+        {
+            "title": "百信购(移动端)",
+            "yuanma": "https://github.com/tobaccos/chengyue",
+            "yanshi": "http://www.bxgogo.com"
+        },
+        {
+            "title": "订餐app",
+            "yuanma": "https://github.com/tobaccos/dinner",
+            "yanshi": "https://tobaccos.github.io/dinner/#/home"
+        }
+    ]
+}
