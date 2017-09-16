@@ -1,17 +1,22 @@
 <template>
 	<div id="app">
 		<div class="header">
-			<em style="float: left;width: 40px;height: 40px;"><img src="./assets/logo3.png" /></em>
-			
-			{{title}}
-			
+			<em style="float: left;width: 40px;height: 40px;"><img src="./assets/555.png" /></em> {{title}}
+			<em @click="openMusic" v-if="music" style="float: right;width: 40px;height: 40px;" class="iconfont icon-yinle">
+				
+				<audio autoplay="autoplay" loop="loop" src="../static/林俊杰 - 一眼万年.mp3"></audio>
+			</em>
+			<em @click="openMusic" v-else style="float: right;width: 40px;height: 40px;" class="iconfont icon-yinleguanbi">
+				
+			</em>
 		</div>
-<div class="content">
-	<transition name="custom-classes-transition" enter-active-class="animated bounceInLeft">
-			<router-view></router-view>
-		</transition>
-</div>
-		
+		<div class="content">
+			<transition name="custom-classes-transition" enter-active-class="animated slideInLeft">
+				<router-view></router-view>
+
+			</transition>
+		</div>
+
 		<div class="footer">
 
 			<router-link :to="nav.path" v-for="nav in navs">
@@ -49,28 +54,33 @@
 					value: "联系我"
 				}],
 				navss: ['icon-zhuye-copy', 'icon-xiangmu-copy', 'icon-ziliao-copy', 'icon-lianxiwo-copy'],
-				title: "首页"
+				title: "首页",
+				music:true
 			}
 		},
 		mounted() {
-mui.init({
-        keyEventBind: {
-            backbutton: true  //打开back按键监听
-        }
-    });
-    mui.back = function () {
-        var btn = ["确定", "取消"];
-        mui.confirm('确认关闭当前窗口？', '提示', btn, function (e) {
-            if (e.index == 0) {
-                plus.runtime.quit();//退出APP
-            }
-        });
-    }
+			mui.init({
+				keyEventBind: {
+					backbutton: true //打开back按键监听
+				}
+			});
+			mui.back = function() {
+				var btn = ["确定", "取消"];
+				mui.confirm('确认关闭当前窗口？', '提示', btn, function(e) {
+					if(e.index == 0) {
+						plus.runtime.quit(); //退出APP
+					}
+				});
+			}
 		},
 		methods: {
 			//导航切换
 			change(x) {
 				return this.title = x
+			},
+			//音乐开启关闭
+			openMusic(){
+				this.music=!this.music
 			}
 		}
 	}
@@ -93,7 +103,7 @@ mui.init({
 		height: 40px;
 		line-height: 40px;
 		background: #f4f4f4;
-		 color: #7bcca8;
+		color: #7bcca8;
 		font-size: 16px;
 		position: fixed;
 		top: 0;
@@ -101,12 +111,13 @@ mui.init({
 		text-align: center;
 		margin-bottom: 40px;
 		z-index: 2;
-		
 	}
-	.header img{
+	
+	.header img {
 		height: 100%;
 	}
-	.content{
+	
+	.content {
 		width: 100%;
 		height: 1000px;
 		margin-bottom: 50px;
@@ -115,6 +126,9 @@ mui.init({
 		left: 0;
 		top: 40px;*/
 	}
+	.iconfont{
+		font-size: 20px;
+	}
 	.footer {
 		width: 100%;
 		height: 50px;
@@ -122,14 +136,13 @@ mui.init({
 		position: fixed;
 		bottom: 0;
 		left: 0;
-		background:#f4f4f4;
+		background: #f4f4f4;
 		display: flex;
 		justify-content: space-around;
 		z-index: 2;
 	}
 	
 	.footer .iconfont {
-		
 		line-height: 50px;
 	}
 	
