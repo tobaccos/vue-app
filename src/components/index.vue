@@ -1,7 +1,7 @@
 <template>
 	<div class="index">
 
-		<div id="" style="height: 300px;">
+		<!--<div id="" style="height: 300px;">
 			<mt-swipe :auto="4000">
 				<mt-swipe-item ><img src="../assets/logo1.png"/></mt-swipe-item>
 				<mt-swipe-item ><img src="../assets/logo1.png"/></mt-swipe-item>
@@ -9,7 +9,7 @@
 			
 			</mt-swipe>
 		</div>
-	
+	-->
 
 	</div>
 </template>
@@ -41,11 +41,7 @@
 	.index {
 		
 	}
-	image {
-  width: 40px;
-  height: 300px;
-  margin: auto;
-}
+
 	
 	a {
 		color: #42b983;

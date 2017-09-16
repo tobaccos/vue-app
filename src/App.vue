@@ -119,7 +119,7 @@
 	
 	.content {
 		width: 100%;
-		height: 1000px;
+		height: 100%;
 		margin-bottom: 50px;
 		margin-top: 40px;
 		/*position: fixed;
@@ -127,7 +127,7 @@
 		top: 40px;*/
 	}
 	.iconfont{
-		font-size: 20px;
+		font-size: 25px;
 	}
 	.footer {
 		width: 100%;
