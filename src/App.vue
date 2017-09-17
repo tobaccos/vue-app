@@ -4,11 +4,13 @@
 			<em style="float: left;width: 40px;height: 40px;"><img src="./assets/555.png" /></em> {{title}}
 			<em @click="openMusic" v-if="music" style="float: right;width: 40px;height: 40px;" class="iconfont icon-yinle">
 				
-				<audio autoplay="autoplay" loop="loop" src="../static/林俊杰 - 一眼万年.mp3"></audio>
+
 			</em>
 			<em @click="openMusic" v-else style="float: right;width: 40px;height: 40px;" class="iconfont icon-yinleguanbi">
 				
 			</em>
+				<audio autoplay="autoplay" loop="loop" src="../static/林俊杰 - 一眼万年.mp3"></audio>
+			
 		</div>
 		<div class="content">
 			<transition name="custom-classes-transition" enter-active-class="animated slideInLeft">
@@ -80,7 +82,10 @@
 			},
 			//音乐开启关闭
 			openMusic(){
-				this.music=!this.music
+				this.music=!this.music;
+				var audios=document.querySelector("audio");
+				this.music==false?audios.pause():audios.play()
+			
 			}
 		}
 	}
