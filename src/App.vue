@@ -9,8 +9,8 @@
 			<em @click="openMusic" v-else style="float: right;width: 40px;height: 40px;" class="iconfont icon-yinleguanbi">
 				
 			</em>
-				<audio autoplay="autoplay" loop="loop" src="../static/林俊杰 - 一眼万年.mp3"></audio>
-			
+			<audio autoplay="autoplay" loop="loop" src="../static/林俊杰 - 一眼万年.mp3"></audio>
+
 		</div>
 		<div class="content">
 			<transition name="custom-classes-transition" enter-active-class="animated slideInLeft">
@@ -57,23 +57,47 @@
 				}],
 				navss: ['icon-zhuye-copy', 'icon-xiangmu-copy', 'icon-ziliao-copy', 'icon-lianxiwo-copy'],
 				title: "首页",
-				music:true
+				music: true
 			}
 		},
 		mounted() {
-			mui.init({
-				keyEventBind: {
-					backbutton: true //打开back按键监听
-				}
-			});
 			mui.back = function() {
-				var btn = ["确定", "取消"];
-				mui.confirm('确认关闭当前窗口？', '提示', btn, function(e) {
-					if(e.index == 0) {
-						plus.runtime.quit(); //退出APP
+
+				//首页返回键处理
+
+				//处理逻辑：1秒内，连续两次按返回键，则退出应用；
+
+				var first = null;
+
+				plus.key.addEventListener('backbutton', function() {
+
+					//首次按键，提示‘再按一次退出应用’
+
+					if(!first) {
+
+						first = new Date().getTime();
+
+						mui.toast('再按一次退出应用');
+
+						setTimeout(function() {
+
+							first = null;
+
+						}, 1000);
+
+					} else {
+
+						if(new Date().getTime() - first < 1000) {
+
+							plus.runtime.quit();
+
+						}
+
 					}
-				});
-			}
+
+				}, false);
+
+			};
 		},
 		methods: {
 			//导航切换
@@ -81,11 +105,11 @@
 				return this.title = x
 			},
 			//音乐开启关闭
-			openMusic(){
-				this.music=!this.music;
-				var audios=document.querySelector("audio");
-				this.music==false?audios.pause():audios.play()
-			
+			openMusic() {
+				this.music = !this.music;
+				var audios = document.querySelector("audio");
+				this.music == false ? audios.pause() : audios.play()
+
 			}
 		}
 	}
@@ -131,9 +155,11 @@
 		left: 0;
 		top: 40px;*/
 	}
-	.iconfont{
+	
+	.iconfont {
 		font-size: 25px;
 	}
+	
 	.footer {
 		width: 100%;
 		height: 50px;
