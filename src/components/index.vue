@@ -1,15 +1,6 @@
 <template>
 	<div class="index">
-
-		<!--<div id="" style="height: 300px;">
-			<mt-swipe :auto="4000">
-				<mt-swipe-item ><img src="../assets/logo1.png"/></mt-swipe-item>
-				<mt-swipe-item ><img src="../assets/logo1.png"/></mt-swipe-item>
-				<mt-swipe-item ><img src="../assets/logo1.png"/></mt-swipe-item>
-			
-			</mt-swipe>
-		</div>
-	-->
+<h3>还没想好要写什么</h3>
 
 	</div>
 </template>

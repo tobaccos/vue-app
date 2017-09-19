@@ -1,6 +1,9 @@
 {
     "samples": [
         {
+            "title": "个人vue——app",
+            "yuanma": "https://github.com/tobaccos/vue-app"
+        },{
             "title": "橙越商城",
             "yuanma": "https://github.com/tobaccos/chengyue",
             "yanshi": "http://www.youpinshanglian.com"
@@ -14,6 +17,19 @@
             "title": "订餐app",
             "yuanma": "https://github.com/tobaccos/dinner",
             "yanshi": "https://tobaccos.github.io/dinner/#/home"
+        },
+        {
+            "title": "pc端vue小demo",
+            "yuanma": "https://github.com/tobaccos/guanwang",
+            "yanshi": "https://tobaccos.github.io/guanwang/dist/"
+        },
+        {
+            "title": "仿JQuery架构小demo",
+            "yuanma": "https://github.com/tobaccos/Tobaccos.js"
+        },
+        {
+            "title": "vue+iview响应式pc端小demo",
+            "yuanma": "https://tobaccos.github.io/tobacco/dist/"
         }
     ]
 }
